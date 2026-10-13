@@ -1,0 +1,110 @@
+<title>Portfolio Sokhna Touré</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Mise en page : une colonne étroite, projets en cartes, tout visible d'un coup */
+:root{
+  --bg:#F5F8FB; --surface:#FFFFFF; --ink:#12223A; --muted:#546378;
+  --line:#D9E1EA; --accent:#1B5FC1; --accent-ink:#FFFFFF; --tag:#E6EEF9;
+  --display:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --mono:"JetBrains Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1726; --surface:#16233A; --ink:#E8EEF7; --muted:#9AABC2;
+  --line:#26364F; --accent:#6FA6F5; --accent-ink:#0E1726; --tag:#1F3355; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0E1726; --surface:#16233A; --ink:#E8EEF7; --muted:#9AABC2;
+  --line:#26364F; --accent:#6FA6F5; --accent-ink:#0E1726; --tag:#1F3355; color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;padding-inline:20px;padding-block:40px 56px}
+main{max-width:860px;margin-inline:auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700}
+h2{font-size:1.5rem;font-weight:700;margin-bottom:20px}
+h3{font-size:1.2rem;font-weight:500}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
+.role{font-family:var(--mono);font-size:.9rem;color:var(--muted);margin-top:10px}
+.intro{max-width:62ch;margin-top:20px;font-size:1.1rem}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-block;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:600;border:1.5px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.card p{color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.tag{background:var(--tag);font-family:var(--mono);font-size:.78rem;padding:3px 9px;border-radius:4px}
+.card a.more{font-weight:600;font-size:.95rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px 32px}
+.skills dt{font-family:var(--mono);font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.skills dd{margin:0}
+.contact{border-top:1px solid var(--line);padding-top:28px}
+.contact p+p{margin-top:6px}
+.sel{user-select:all}
+@media (prefers-reduced-motion:no-preference){.btn{transition:transform .15s}.btn:hover{transform:translateY(-2px)}}
+</style>
+
+<main>
+  <header>
+    <h1>Sokhna Touré</h1>
+    <p class="role">Étudiante en informatique · Longueuil, Québec</p>
+    <p class="intro">Je suis étudiante au DEC en informatique au Collège André-Grasset. Je cherche un stage en développement logiciel et web à partir du 11 janvier 2027. J'aime construire des applications qui fonctionnent de bout en bout : l'interface, l'API et la base de données.</p>
+    <div class="links">
+      <a class="btn main" href="https://github.com/sokhna-toure">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/sokhnatoure">LinkedIn</a>
+    </div>
+  </header>
+
+  <section aria-labelledby="projets">
+    <h2 id="projets">Projets</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>API Web</h3>
+        <p>API avec les opérations CRUD (créer, lire, modifier, supprimer) connectée à une base de données MySQL. Tests et correction des erreurs.</p>
+        <div class="tags"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">MySQL</span><span class="tag">Entity Framework Core</span></div>
+        <a class="more" href="https://github.com/sokhna-toure">Voir le code sur GitHub</a>
+      </article>
+      <article class="card">
+        <h3>Application Web</h3>
+        <p>Interface en React qui utilise une API créée avec Node.js et Express. Données dans MySQL, versions suivies avec Git et GitHub.</p>
+        <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MySQL</span></div>
+        <a class="more" href="https://github.com/sokhna-toure">Voir le code sur GitHub</a>
+      </article>
+      <article class="card">
+        <h3>Application mobile</h3>
+        <p>Application à plusieurs écrans avec navigation entre les fonctionnalités et gestion des données. Tests et corrections des problèmes.</p>
+        <div class="tags"><span class="tag">NativeScript</span><span class="tag">JavaScript</span></div>
+        <a class="more" href="https://github.com/sokhna-toure">Voir le code sur GitHub</a>
+      </article>
+      <article class="card">
+        <h3>Traqueur de l'ISS sur ESP32</h3>
+        <p>Une carte ESP32 interroge l'API Open Notify toutes les 3 secondes et dessine la position de la Station spatiale internationale sur un écran OLED 128 × 64.</p>
+        <div class="tags"><span class="tag">MicroPython</span><span class="tag">ESP32</span><span class="tag">I2C</span><span class="tag">API REST</span></div>
+        <a class="more" href="https://github.com/sokhna-toure">Voir le code sur GitHub</a>
+      </article>
+      <article class="card">
+        <h3>Mixa Québec</h3>
+        <p>Conception d'une application de recherche de produits Mixa au Québec : maquettes de plusieurs écrans et réflexion sur l'expérience utilisateur.</p>
+        <div class="tags"><span class="tag">Photoshop</span><span class="tag">Adobe XD</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="competences">
+    <h2 id="competences">Compétences</h2>
+    <dl class="skills">
+      <div><dt>Programmation</dt><dd>C#, JavaScript, HTML5, CSS3, React, Node.js, Express.js</dd></div>
+      <div><dt>Bases de données</dt><dd>MySQL, SQL, MySQL Workbench, Entity Framework Core</dd></div>
+      <div><dt>Outils</dt><dd>Git, GitHub, Visual Studio, VS Code, Linux/Ubuntu, VirtualBox</dd></div>
+      <div><dt>Conception</dt><dd>Adobe Photoshop, Adobe XD</dd></div>
+    </dl>
+  </section>
+
+  <section class="contact" aria-labelledby="contact">
+    <h2 id="contact">Me contacter</h2>
+    <p>Courriel : <span class="sel">touresokhna102@gmail.com</span></p>
+    <p>Téléphone : <span class="sel">514 497-4760</span></p>
+    <p>Disponible pour un stage à partir du 11 janvier 2027.</p>
+  </section>
+</main>
